@@ -18,7 +18,7 @@ function s.condition(e)
 	return e:GetHandler():IsStatus(STATUS_SUMMON_TURN)
 end
 function s.retfilter(c)
-	return c:IsAbleToDeck() and c:IsType(TYPE_MONSTER)
+	return c:IsAbleToDeck() and c:IsType(TYPE_MONSTER) and c:IsType(TYPE_NORMAL) and c:IsLevel(7)
 end
 function s.target(e,tp,eg,ep,ev,re,r,rp,chk)
 	local ct=Duel.GetMatchingGroupCount(Card.IsType,tp,0,LOCATION_GRAVE,nil,TYPE_SPELL)
