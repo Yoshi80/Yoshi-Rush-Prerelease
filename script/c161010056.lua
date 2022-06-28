@@ -5,7 +5,7 @@ function s.initial_effect(c)
 	--Shuffle 1 Level 8 monster into the deck to draw 1
 	local e1=Effect.CreateEffect(c)
 	e1:SetType(EFFECT_TYPE_ACTIVATE)
-	e1:SetCategory(CATEGORY_DRAW+CATEGROY_ATKCHANGE)
+	e1:SetCategory(CATEGORY_DRAW+CATEGORY_ATKCHANGE)
 	e1:SetCode(EVENT_FREE_CHAIN)
 	e1:SetProperty(EFFECT_FLAG_PLAYER_TARGET)
 	e1:SetCost(s.cost)
