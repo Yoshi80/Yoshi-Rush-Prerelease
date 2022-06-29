@@ -18,7 +18,7 @@ end
 function s.cost(e,tp,eg,ep,ev,re,r,rp,chk)
 	if chk==0 then return Duel.IsExistingMatchingCard(s.costfilter,tp,LOCATION_HAND,0,1,nil) end
 end
-function s.tdfilter1(c,oppLvl)
+function s.tdfilter1(c,opplvl)
 	return c:IsType(TYPE_MONSTER) and c:IsRace(RACE_PYRO) and c:IsAbleToDeck() and c:GetLevel()>0
 		and Duel.IsExistingMatchingCard(s.tdfilter2,tp,LOCATION_GRAVE,0,1,c,opplvl-c:GetLevel(),c)
 end
